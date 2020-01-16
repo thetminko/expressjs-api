@@ -15,5 +15,4 @@ class JwtService {
 
 }
 
-const jwtService = new JwtService();
-export default jwtService;
+export default JwtService;

@@ -16,8 +16,8 @@ const initEnv = (): void => {
     dbName: process.env['db.name'],
     dbUsername: process.env['db.username'],
     dbPassword: process.env['db.password'],
-    jwtPublicPath: process.env['db.jwt.public.path'],
-    jwtPrivatePath: process.env['db.jwt.private.path']
+    jwtPublicPath: process.env['jwt.public.path'],
+    jwtPrivatePath: process.env['jwt.private.path']
   };
 };
 

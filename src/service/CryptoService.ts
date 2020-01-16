@@ -4,5 +4,4 @@ class CryptoService {
 
 }
 
-const cryptoService = new CryptoService();
-export default cryptoService;
+export default CryptoService;

@@ -1,29 +1,12 @@
-import { LoginReq, UserDTO } from '../dto';
-import { userService, cryptoService } from '.';
+import { EmailLoginReq, UserDTO } from '../dto';
 import { User } from '../entity';
 import { UserStatus } from '../enum';
 import { UnAuthorizedError } from '../error/checked';
 
-class AuthService {
+class EmailAuthService {
 
-  constructor() {
+  login = async (loginReq: EmailLoginReq): Promise<void> => {
     // 
-  }
-
-  login = async (loginReq: LoginReq): Promise<void> => {
-    try {
-      const { email, password } = loginReq;
-      const user = await userService.findByEmail(email);
-
-      const hashedPass = cryptoService.hash(password);
-
-      if (hashedPass === user.password) {
-        // /
-      }
-
-    } catch (err) {
-      throw err;
-    }
   };
 
   userStatusCheck = (user: User | UserDTO): void => {
@@ -52,6 +35,4 @@ class AuthService {
 
 }
 
-const authService = new AuthService();
-
-export default authService;
+export default EmailAuthService;

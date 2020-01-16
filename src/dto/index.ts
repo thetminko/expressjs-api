@@ -1,6 +1,6 @@
 import { UserStatus } from '../enum';
 
-export interface LoginReq {
+export interface EmailLoginReq {
   email: string;
   password: string;
 }

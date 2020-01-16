@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { UnAuthorizedError } from '../../error/checked';
-import { authService } from '../../service';
+import { emailAuthService } from '../../service';
 import { UserDTO } from '../../dto';
 import uuid = require('uuid');
 
@@ -10,7 +10,7 @@ const userStatusCheckNotRequiredUrls = [];
 // TODO, should return a decoded token if authenticated, else throw error
 const isAuthenticatedCheck = (): Promise<UserDTO> => null;
 
-const userStatusCheck = (user: UserDTO): void => authService.userStatusCheck(user);
+const userStatusCheck = (user: UserDTO): void => emailAuthService.userStatusCheck(user);
 
 const authenticationHandler = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
   try {
