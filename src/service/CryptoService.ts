@@ -1,9 +1,6 @@
 class CryptoService {
 
-  // TODO Update hash func
-  hash = async (val: string): Promise<string> => val;
-
-  generateJwtToken = async (payload: any): Promise<string> => 'jwt_token';
+  hash = (val: string): string => val;
 
 }
 

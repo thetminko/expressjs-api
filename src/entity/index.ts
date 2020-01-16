@@ -2,7 +2,7 @@ import User from './User';
 import UserDeviceInfo from './UserDeviceInfo';
 
 const allEntities = [
-  User
+  User, UserDeviceInfo
 ];
 
 export { User, UserDeviceInfo };

@@ -1,15 +1,15 @@
 import { Sequelize } from 'sequelize-typescript';
 import allEntities from '../entity';
+import env from '../env';
 
 let sequelize = undefined;
 
 const dbInit = async (): Promise<void> => {
-  // TODO add db connection
   sequelize = new Sequelize({
     dialect: 'mysql',
-    database: process.env.DB_NAME,
-    username: process.env.DB_USERNAME,
-    password: process.env.DB_PASSWORD,
+    database: env.dbName,
+    username: env.dbUsername,
+    password: env.dbPassword,
     models: allEntities
   });
 

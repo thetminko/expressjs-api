@@ -15,10 +15,10 @@ class AuthService {
       const { email, password } = loginReq;
       const user = await userService.findByEmail(email);
 
-      const hashed = await cryptoService.hash(password);
+      const hashedPass = cryptoService.hash(password);
 
-      if (hashed === user.password) {
-
+      if (hashedPass === user.password) {
+        // /
       }
 
     } catch (err) {

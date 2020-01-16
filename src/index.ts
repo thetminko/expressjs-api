@@ -1,7 +1,7 @@
 import express, { Application } from 'express';
 import helmet from 'helmet';
 import cors from 'cors';
-import dotenv from 'dotenv';
+import './env';
 import { protectedController } from './controller/protected';
 import { publicController } from './controller/public';
 import { dbInit } from './sequelize';
@@ -30,8 +30,7 @@ const apiInit = (): void => {
 
 const appStartUp = async (): Promise<void> => {
   try {
-    dotenv.config();
-    await dbInit();
+    // await dbInit();
     apiInit();
   } catch (err) {
     // eslint-disable-next-line no-console
