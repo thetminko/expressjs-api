@@ -1,25 +1,16 @@
 {
-  "name": "neighbourlife-api",
+  "name": "expressjs-api",
   "version": "1.0.0",
-  "description": "APIs for Neighbourlife app",
+  "description": "ExpressJS Typescript template",
   "main": "index.js",
   "scripts": {
     "lint": "eslint ./src/**/*.ts",
     "tsc": "tsc",
     "start": "npm run tsc && node build/index.js",
-    "start-dev": "ts-node-dev --respawn --transpileOnly ./src/index.ts",
+    "start-dev": "ts-node src/index.ts",
+    "watch": "nodemon --exec ts-node src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/thetminko/neighbourlife-api.git"
-  },
-  "author": "m&t",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/thetminko/neighbourlife-api/issues"
-  },
-  "homepage": "https://github.com/thetminko/neighbourlife-api#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
@@ -48,6 +39,8 @@
     "eslint": "^6.8.0",
     "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-security": "^1.4.0",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.2",
     "ts-node-dev": "^1.0.0-pre.44",
     "typescript": "^3.7.4"
   }
